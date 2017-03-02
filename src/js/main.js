@@ -158,14 +158,16 @@ class Key {
 
 class Safe {
     constructor (safeData, key) {
-        this.key = key;
+        this.rightKey = function () {
+            return key;
+        }
         this.getSafeData = function(){
             return safeData;
         }
 
     }
     unlock (anyKey) {
-        if (anyKey === this.key) {
+        if (anyKey === this.rightKey()) {
             return this.getSafeData();
         }
     }
@@ -211,7 +213,7 @@ console.assert(safe.unlock(rightKey) === sensitive);
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
-
+// call Validator
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
 
