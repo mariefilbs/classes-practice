@@ -96,15 +96,31 @@ console.assert(cat.growl() === "meow");
 // prototype that is called `squeal` that returns the secret string.
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
-
+//
 class KeepSecret {
-    constructor (secret) {
-        var storeSecret = function () { return secret; }
-        return storeSecret;
+    constructor(secret) {
+        this.getSecret = function(){
+            return secret;
+        }
     }
-    squeal () { return storeSecret; }
-
+    squeal() {
+        return this.getSecret();
+    }
 }
+
+
+
+
+
+//my origin logic
+// class KeepSecret {
+//     constructor (secret) {
+//         var storeSecret = function () { return secret; }
+//         return storeSecret;
+//     }
+//     squeal () { return storeSecret; }
+//
+// }
 
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
@@ -133,6 +149,30 @@ console.assert(dontTellNobody.squeal() === mySecret);
 // the secret data.
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
+
+class Key {
+    constructor () {
+
+    }
+}
+
+class Safe {
+    constructor (safeData, key) {
+        this.key = key;
+        this.getSafeData = function(){
+            return safeData;
+        }
+
+    }
+    unlock (anyKey) {
+        if (anyKey === this.key) {
+            return this.getSafeData();
+        }
+    }
+
+    }
+
+
 
 
 
