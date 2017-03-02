@@ -213,7 +213,19 @@ console.assert(safe.unlock(rightKey) === sensitive);
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
-// call Validator
+//I know this isn't working, but wanted to leave what I was starting with.
+// class Validator {
+//     constructor (email) {
+//       this.email = email
+//     }
+//     email () {
+//         if (this.email.includes('@')) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
+// }
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
 
