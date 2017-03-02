@@ -97,6 +97,14 @@ console.assert(cat.growl() === "meow");
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
+class KeepSecret {
+    constructor (secret) {
+        var storeSecret = function () { return secret; }
+        return storeSecret;
+    }
+    squeal () { return storeSecret; }
+
+}
 
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
